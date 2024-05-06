@@ -1,0 +1,507 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh; /* Ensure the body fills at least the viewport height */
+    display: flex; /* Use flexbox to make footer stick to the bottom */
+    flex-direction: column; /* Make the layout stack vertically */
+    
+}
+
+
+@keyframes mover {
+0% { margin-left:-800px; }
+20% { margin-left:-800px; }
+35% { margin-left:0px; }
+100% { margin-left:0px; }
+}
+
+.pixelify-sans {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.jacquarda-bastarda-9-regular {
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+
+  h1 {
+    color: rgb(255, 255, 255);
+    padding: .25%;
+    margin-top: 2.5%;
+    text-align: center;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: xxx-large;
+
+}
+
+
+h2 {
+    color: rgb(255, 255, 255);
+    padding: .25%;
+    margin-top: 25%;
+    text-align: center;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: xxx-large;
+}
+
+h3 {
+    color:#ff6200;
+    padding: .25%;
+    margin-left: 42%;
+    margin-top: 7%;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-size: xx-large;
+    background-color: #000000;
+    width: fit-content;
+    
+    
+}
+
+h4 {
+    color: #000000;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15%;
+    font-family: "Space Mono", monospace;
+    background-color: #53eef9;
+    width: fit-content;
+    }
+
+
+h6 {
+    color: #000000;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size:medium;
+    font-family: "Space Mono", monospace;
+    background-color: #f779e7;
+    width: fit-content;
+    }
+
+
+h5 {
+    color: #000000;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: "Space Mono", monospace;
+    }
+
+header{
+
+    background-image: url(fropics/afb65b3a5647aadcb55dd81658223738.gif);
+    top: 0; /* Stick the header to the top of the viewport */
+    width: 100%; /* Make the header span the full width of the viewport */
+    z-index: 1000; /* Ensure the header appears above other elements */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  
+}
+    
+nav {
+    background-color: #ff6200;
+    position: sticky; /* Make the nav bar fixed */
+    top: 0; /* Adjust this value to leave space for the header */
+    width: 100%; /* Make the nav bar span the full width of the viewport */
+    z-index: 1000; /* Ensure the nav bar appears above other elements */
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1.5%;
+    text-align: center;
+    font-family: "Space Mono", monospace;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    font-family: "Space Mono", monospace;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px; /* Added padding for better spacing */
+    font-family: "Space Mono", monospace;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #f193e1;
+    font-family: "Space Mono", monospace;
+}
+
+
+
+.grid-item {
+    background-size: contain;
+       background-repeat: no-repeat;
+       background-position: center;
+    
+
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+}
+
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 30px;
+        }
+        
+        .div1 { grid-area: 1 / 1 / 2 / 2; }
+        .div2 { grid-area: 1 / 2 / 2 / 3; 
+
+            margin-left: 25%;
+            margin-right: 25%; }
+        .div3 { grid-area: 2 / 1 / 3 / 2; }
+        .div4 { grid-area: 2 / 2 / 3 / 3; 
+        
+            margin-left: 25%;
+            margin-right: 25%; }
+        .div5 { grid-area: 3 / 1 / 4 / 2; }
+        .div6 { grid-area: 3 / 2 / 4 / 3; 
+        
+            margin-left: 25%;
+            margin-right: 25%; }
+        .div7 { grid-area: 4 / 1 / 5 / 2; }
+        .div8 { grid-area: 4 / 2 / 5 / 3; 
+        
+            margin-left: 25%;
+            margin-right: 25%; }
+        .div9 { grid-area: 5 / 1 / 6 / 2; }
+        .div10 { grid-area: 5 / 2 / 6 / 3; 
+        
+            margin-left: 25%;
+            margin-right: 25%; }
+        .div11 { grid-area: 6 / 1 / 7 / 2; }
+        .div12 { grid-area: 6 / 2 / 7 / 3; 
+        
+        margin-left: 25%;
+        margin-right: 25%; }
+
+    .parent2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 30px;
+            }
+            
+            .div13 { grid-area: 1 / 1 / 2 / 2; 
+                margin-left: 25%;
+                margin-right: 25%; }
+            .div14 { grid-area: 1 / 2 / 2 / 3; }
+            .div15 { grid-area: 2 / 1 / 3 / 2; 
+                margin-left: 25%;
+                margin-right: 25%;}
+            .div16 { grid-area: 2 / 2 / 3 / 3;  }
+            .div17 { grid-area: 3 / 1 / 4 / 2;  margin-left: 25%;
+                margin-right: 25%;}
+            .div18 { grid-area: 3 / 2 / 4 / 3;}
+            .div19 { grid-area: 4 / 1 / 5 / 2; margin-left: 25%;
+            margin-right: 25%;}
+
+            .div20 { grid-area: 4 / 2 / 5 / 3; 
+            }
+            .div21 { grid-area: 5 / 1 / 6 / 2; margin-left: 25%;
+                margin-right: 25%;}
+            .div22 { grid-area: 5 / 2 / 6 / 3;
+                 }
+            .div23 { grid-area: 6 / 1 / 7 / 2; margin-left: 25%;
+                margin-right: 25%;}
+            .div24 { grid-area: 6 / 2 / 7 / 3; }
+            .div25 { grid-area: 7 / 1 / 8 / 2; margin-left: 25%;
+                margin-right: 25%;}
+            .div26 { grid-area: 7 / 2 / 8 / 3; }
+            .div27 { grid-area: 8 / 1 / 9 / 2;  margin-left: 25%;
+                margin-right: 25%;}
+            .div28 { grid-area: 8 / 2 / 9 / 3;}
+            
+            
+.parent3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+                }
+                
+    .div29 { grid-area: 1 / 1 / 2 / 2; }
+    .div30 { grid-area: 1 / 2 / 2 / 3; 
+        margin-left: 25%;
+        margin-right: 25%;}
+    .div31 { grid-area: 2 / 1 / 3 / 2; }
+    .div32 { grid-area: 2 / 2 / 3 / 3; margin-left: 25%;
+        margin-right: 25%;}
+    .div33 { grid-area: 3 / 1 / 4 / 2; }
+    .div34 { grid-area: 3 / 2 / 4 / 3; margin-left: 25%;
+        margin-right: 25%;}
+    .div35 { grid-area: 4 / 1 / 5 / 2; }
+    .div36 { grid-area: 4 / 2 / 5 / 3; margin-left: 25%;
+        margin-right: 25%;}
+    .div37 { grid-area: 5 / 1 / 6 / 2; }
+    .div38 { grid-area: 5 / 2 / 6 / 3; margin-left: 25%;
+        margin-right: 25%;}
+    .div39 { grid-area: 6 / 1 / 7 / 2; }
+    .div40 { grid-area: 6 / 2 / 7 / 3; margin-left: 25%;
+        margin-right: 25%;}
+    .div41 { grid-area: 7 / 1 / 8 / 2; }
+    .div42 { grid-area: 7 / 2 / 8 / 3; margin-left: 25%;
+        margin-right: 25%;}
+    .div43 { grid-area: 8 / 1 / 9 / 2; }
+    .div44 { grid-area: 8 / 2 / 9 / 3; margin-left: 25%;
+        margin-right: 25%;}
+    .div45 { grid-area: 9 / 1 / 10 / 2; }
+    .div46 { grid-area: 9 / 2 / 10 / 3; 
+        margin-left: 25%;
+        margin-right: 25%;}
+    .div47 { grid-area: 10 / 1 / 11 / 2; }
+    .div48 { grid-area: 10 / 2 / 11 / 3; 
+        margin-left: 25%;
+        margin-right: 25%;}
+
+
+        .parent4 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 30px;
+            }
+            
+            .div49 { grid-area: 1 / 1 / 2 / 2;  margin-left: 25%;
+            margin-right: 25%; }
+            .div50 { grid-area: 1 / 2 / 2 / 3; 
+            }
+            .div51 { grid-area: 2 / 1 / 3 / 2; 
+                margin-left: 25%;
+                margin-right: 25%;}
+            .div52 { grid-area: 2 / 2 / 3 / 3;  }
+            .div53 { grid-area: 3 / 1 / 4 / 2; margin-left: 25%;
+                margin-right: 25%;}
+            .div54 { grid-area: 3 / 2 / 4 / 3;  }
+            .div55 { grid-area: 4 / 1 / 5 / 2; margin-left: 25%;
+                margin-right: 25%;}
+            .div56 { grid-area: 4 / 2 / 5 / 3;}
+            .div57 { grid-area: 5 / 1 / 6 / 2; margin-left: 25%;
+                margin-right: 25%;}
+            .div58 { grid-area: 5 / 2 / 6 / 3;}
+            .div59 { grid-area: 6 / 1 / 7 / 2; margin-left: 25%;
+                margin-right: 25%;}
+            .div60 { grid-area: 6 / 2 / 7 / 3; }
+
+
+.parent5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+                    }
+                    
+        .div61 { grid-area: 1 / 1 / 2 / 2; }
+        .div62 { grid-area: 1 / 2 / 2 / 3; 
+        
+            margin-left: 25%;
+            margin-right: 25%; }
+        .div63 { grid-area: 2 / 1 / 3 / 2;}
+        .div64 { grid-area: 2 / 2 / 3 / 3;  margin-left: 25%;
+            margin-right: 25%;  }
+        .div65 { grid-area: 3 / 1 / 4 / 2;}
+        .div66 { grid-area: 3 / 2 / 4 / 3;
+            margin-left: 25%;
+            margin-right: 25%; }
+        .div67 { grid-area: 4 / 1 / 5 / 2;}
+        
+        .div68 { grid-area: 4 / 2 / 5 / 3; margin-left: 25%;
+            margin-right: 25%;  
+                    }
+        .div69 { grid-area: 5 / 1 / 6 / 2;}
+        .div70 { grid-area: 5 / 2 / 6 / 3; margin-left: 25%;
+            margin-right: 25%; }
+        .div71 { grid-area: 6 / 1 / 7 / 2;}
+        .div72 { grid-area: 6 / 2 / 7 / 3;  margin-left: 25%;
+            margin-right: 25%; }
+        .div73 { grid-area: 7 / 1 / 8 / 2; }
+        .div74 { grid-area: 7 / 2 / 8 / 3;  margin-left: 25%;
+            margin-right: 25%; }
+        .div75 { grid-area: 8 / 1 / 9 / 2;}
+        .div76 { grid-area: 8 / 2 / 9 / 3; margin-left: 25%;
+            margin-right: 25%; }
+        
+        
+
+.center {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25%;
+}
+
+
+.btn {
+    border-radius: 18px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    text-transform: lowercase;
+    color: rgb(255, 0, 153);
+    font-size: 18px;
+    background: #000000;
+    padding: 10px; /* Adjust padding as needed */
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+/* Change the color of links */
+
+
+.btn2-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25%;
+}
+
+
+.btn2 {
+    border-radius: 18px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    text-transform: lowercase;
+    color: rgb(136, 239, 11);
+    font-size: 18px;
+    background: #000000;
+    padding: 10px; /* Adjust padding as needed */
+    margin-top: 50px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px; /* Adjust position from bottom */
+    left: 30px; /* Adjust position from right */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+
+.btn3-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25%;
+}
+
+.btn3 {
+    border-radius: 18px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    text-transform: lowercase;
+    color: rgb(136, 239, 11);
+    font-size: 18px;
+    background: #000000;
+    padding: 7px; /* Adjust padding as needed */
+    margin-top: 50px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px; /* Adjust position from bottom */
+    right: 30px; /* Adjust position from right */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Change the color of links */
+
+
+
+a {
+    color: rgb(6, 254, 64); 
+    text-decoration: none; 
+    font-family: "Jacquarda Bastarda 9", serif;
+}
+
+a:hover {
+    color: #e787ff; 
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 1%; 
+}
+
+/* Adjust grid item styles for responsiveness */
+.grid-item {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modify parent grid container styles for responsiveness */
+.parent, .parent2, .parent3, .parent4, .parent5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Use auto-fit to adjust columns based on available space */
+    grid-gap: 10px; /* Use grid-gap for spacing between grid items */
+}
+
+/* Adjust button styles for responsiveness */
+.btn, .btn2, .btn3 {
+    border-radius: 18px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    text-transform: lowercase;
+    font-size: 18px;
+    background: #000000;
+    padding: 10px;
+    margin-top: 50px;
+    text-decoration: none;
+    position: fixed;
+    z-index: 1000;
+}
+
+.btn2 {
+    bottom: 20px;
+    left: 30px;
+}
+
+.btn3 {
+    bottom: 20px;
+    right: 30px;
+}
